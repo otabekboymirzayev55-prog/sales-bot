@@ -45,6 +45,8 @@ bot.on('text', async (ctx) => {
   await ctx.reply(questions[state.step]);
   state.step++;
 });
+const http = require('http');
+http.createServer((req, res) => res.end('Bot ishlayapti')).listen(process.env.PORT || 3000);
 
 bot.launch();
 console.log('Bot ishga tushdi ✅');
